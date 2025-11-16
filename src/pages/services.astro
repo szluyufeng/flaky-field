@@ -1,224 +1,288 @@
 ---
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps from '~/components/widgets/Steps.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Services',
+  title: '核心服务 — 巨星出海',
+  description: 'TikTok海外短视频系统实训营、精品课程、品牌孵化、跨境咨询，全方位助力企业出海。',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-
   <Hero
-    tagline="Services"
-    title="Elevate your projects with our stunning templates"
-    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'AstroWind Hero Image',
-    }}
-  />
+    tagline="核心服务"
+    title="全方位出海服务体系"
+    subtitle="从培训到孵化，从咨询到运营，我们为您提供一站式出海解决方案"
+    actions={[
+      { variant: 'primary', text: '免费咨询', href: '/contact', icon: 'tabler:message-circle' },
+      { text: '查看案例', href: '/#cases' },
+    ]}
+  >
+    <Fragment slot="image">
+      <div class="relative w-full h-[400px] bg-gradient-to-br from-blue-600 to-purple-700 rounded-lg shadow-2xl flex items-center justify-center">
+        <div class="text-white text-center px-8">
+          <div class="text-6xl mb-4">🚀</div>
+          <div class="text-3xl font-bold mb-2">专业服务体系</div>
+          <div class="text-xl">助力企业成功出海</div>
+        </div>
+      </div>
+    </Fragment>
+  </Hero>
 
-  <!-- Features2 Widget ************** -->
+  <!-- Features TikTok四大系统 ************** -->
+  <Features
+    id="tiktok-training"
+    title="TikTok海外短视频系统实训营"
+    subtitle="四大核心系统，全链路培训，从定位到变现，系统化掌握TikTok出海运营"
+    tagline="核心培训"
+    items={[
+      {
+        title: '定位系统',
+        description: '<strong>科学上网：</strong>安全稳定的网络环境搭建<br><strong>市场定位：</strong>选择最适合的国家和地区<br><strong>账号定位：</strong>确定账号数量和类型策略<br><strong>内容定位：</strong>明确拍摄内容方向',
+        icon: 'tabler:target-arrow',
+      },
+      {
+        title: '引流系统',
+        description: '<strong>网络呈现：</strong>打造专业的品牌形象<br><strong>拍摄剪辑：</strong>掌握视频制作技巧<br><strong>选题文案：</strong>创作吸引人的内容<br><strong>运营推广：</strong>提升账号影响力<br><strong>数据分析：</strong>优化运营策略',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: '裂变系统',
+        description: '<strong>矩阵搭建：</strong>构建账号矩阵体系<br><strong>社媒搭建：</strong>多平台整合运营<br><strong>小店运营：</strong>TikTok Shop运营技巧<br><strong>外联搭建：</strong>建立合作伙伴网络<br><strong>广告策略：</strong>付费推广优化',
+        icon: 'tabler:chart-arrows-vertical',
+      },
+      {
+        title: '变现系统',
+        description: '<strong>外贸流程：</strong>完整的外贸交易流程<br><strong>客户调研：</strong>精准的客户画像分析<br><strong>转化提升：</strong>提高转化率的方法<br><strong>外联优化：</strong>优化客户沟通策略<br><strong>店铺运营：</strong>电商平台运营<br><strong>物流回款：</strong>物流和资金管理',
+        icon: 'tabler:cash-banknote',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features>
 
+  <!-- Content 实训营特色 **************** -->
+  <Content
+    isReversed
+    tagline="实训营特色"
+    title="系统化、实战化、落地化"
+    items={[
+      {
+        title: '从零到一完整教学',
+        description: '不管您是完全零基础，还是有一定经验，我们都能提供适合的培训方案。',
+      },
+      {
+        title: '真实案例拆解',
+        description: '导师分享真实运营案例，拆解成功秘诀，让学习更直观、更有效。',
+      },
+      {
+        title: '实操练习指导',
+        description: '理论+实操，导师手把手指导，确保学员真正掌握技能。',
+      },
+      {
+        title: '持续跟踪服务',
+        description: '培训结束后持续跟踪指导，解决实际运营中遇到的问题。',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        15天密集培训，快速掌握出海核心技能
+      </h3>
+      <p class="text-lg">
+        我们的实训营采用线上线下相结合的方式，确保学员能够系统化地学习，并在实战中不断提升。
+      </p>
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative w-full h-[400px] bg-gradient-to-br from-green-500 to-teal-600 rounded-lg shadow-xl flex items-center justify-center">
+        <div class="text-white text-center">
+          <div class="text-5xl mb-4">📚</div>
+          <div class="text-2xl font-bold">系统化培训</div>
+          <div class="text-xl mt-2">15天落地实训</div>
+        </div>
+      </div>
+    </Fragment>
+  </Content>
+
+  <!-- Features2 精品课程 ************** -->
   <Features2
-    title="Explore our diverse templates"
-    subtitle="Discover our selection below to streamline and elevate your projects."
+    title="精品课程"
+    subtitle="灵活的学习方式，满足不同企业的需求"
+    tagline="课程体系"
     columns={3}
     items={[
       {
-        title: 'Educational',
-        description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-        icon: 'tabler:school',
+        title: '每月线上落地训练营',
+        description: '15天密集培训，系统学习TikTok运营核心技能，配备专业导师全程指导。',
+        icon: 'flat-color-icons:video-call',
       },
       {
-        title: 'Interior Design',
-        description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
+        title: '每周线上面对面直播',
+        description: '资深导师在线答疑，实时解决运营中的问题，分享最新平台玩法和行业动态。',
+        icon: 'flat-color-icons:online-support',
       },
       {
-        title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-        icon: 'tabler:photo',
-      },
-      {
-        title: 'E-commerce',
-        description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-        icon: 'tabler:shopping-cart',
-      },
-      {
-        title: 'Blog',
-        description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-        icon: 'tabler:article',
-      },
-      {
-        title: 'Business',
-        description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-        icon: 'tabler:arrow-big-up-lines',
-      },
-      {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-        icon: 'tabler:vaccine',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-        icon: 'tabler:tie',
+        title: '每月线下落地沙龙',
+        description: '面对面深度交流，探讨出海策略和实战经验，拓展人脉资源，共享行业资源。',
+        icon: 'flat-color-icons:conference-call',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
+  <!-- Steps 服务流程 ****************** -->
+  <Steps
+    title="服务流程"
+    subtitle="标准化的服务流程，确保服务质量"
     items={[
       {
-        title: 'High-Quality Designs',
-        description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
-        icon: 'tabler:wand',
+        title: '第一步：需求沟通',
+        description: '深入了解您的企业情况、产品特点和出海目标，为您量身定制方案。',
+        icon: 'tabler:number-1',
       },
       {
-        title: 'Customization Tools',
-        description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
-        icon: 'tabler:settings',
+        title: '第二步：方案制定',
+        description: '根据您的需求，制定详细的培训或孵化方案，明确目标和执行计划。',
+        icon: 'tabler:number-2',
       },
       {
-        title: 'Pre-Designed Elements',
-        description:
-          'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
-        icon: 'tabler:presentation',
+        title: '第三步：实施培训',
+        description: '专业导师开展系统化培训，理论+实操，确保学员真正掌握技能。',
+        icon: 'tabler:number-3',
       },
       {
-        title: 'Preview and Mockup Views',
-        description:
-          'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
-        icon: 'tabler:carousel-horizontal',
+        title: '第四步：实战指导',
+        description: '在实际运营过程中，提供持续的指导和支持，帮助解决各种问题。',
+        icon: 'tabler:number-4',
+      },
+      {
+        title: '第五步：效果评估',
+        description: '定期评估运营效果，分析数据，优化策略，确保达到预期目标。',
+        icon: 'tabler:number-5',
+      },
+      {
+        title: '第六步：持续服务',
+        description: '提供长期的跟踪服务，帮助企业持续优化，实现长期稳定增长。',
+        icon: 'tabler:number-6',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Features Image',
+      src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: '服务流程',
     }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
-    </Fragment>
-  </Content>
+  />
 
-  <!-- Content Widget **************** -->
-
+  <!-- Content 品牌孵化 **************** -->
   <Content
-    isAfterContent
+    tagline="品牌孵化"
+    title="从0到1，打造出海品牌"
     items={[
       {
-        title: 'Time Savings',
-        description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
-        icon: 'tabler:clock',
+        title: '品牌定位策划',
+        description: '根据目标市场和受众，精准定位品牌形象和价值主张。',
       },
       {
-        title: 'Professional Appearance',
-        description:
-          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
-        icon: 'tabler:school',
+        title: '内容创作支持',
+        description: '提供专业的内容创作团队，打造高质量的短视频内容。',
       },
       {
-        title: 'Cost-Efficiency',
-        description:
-          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
-        icon: 'tabler:coin',
+        title: '账号运营代理',
+        description: '全托管式运营服务，从账号搭建到日常运营，一站式解决。',
       },
       {
-        title: 'Instant Download',
-        description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
-        icon: 'tabler:file-download',
+        title: '数据分析优化',
+        description: '深度数据分析，持续优化内容和运营策略，提升ROI。',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
-    }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        专业团队，全程护航
+      </h3>
+      <p class="text-lg">
+        我们的品牌孵化服务不仅提供培训，更提供实战运营支持，帮助企业快速建立海外影响力。
+      </p>
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative w-full h-[400px] bg-gradient-to-br from-orange-500 to-red-600 rounded-lg shadow-xl flex items-center justify-center">
+        <div class="text-white text-center">
+          <div class="text-5xl mb-4">🎯</div>
+          <div class="text-2xl font-bold">品牌孵化</div>
+          <div class="text-xl mt-2">从0到1打造品牌</div>
+        </div>
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
-  <!-- Testimonials Widget *********** -->
-
-  <Testimonials
-    title="Words from real customers"
-    testimonials={[
+  <!-- Features2 增值服务 ************** -->
+  <Features2
+    title="增值服务"
+    subtitle="更多专业服务，助力企业全面发展"
+    tagline="专业服务"
+    columns={3}
+    items={[
       {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
-        name: 'Emily Kennedy',
-        job: 'Front-end developer',
-        image: {
-          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Emily Kennedy Image',
-        },
+        title: '一对一咨询指导',
+        description: '配备专属顾问，针对性解决企业出海过程中的痛点和难题。',
+        icon: 'flat-color-icons:business-contact',
       },
       {
-        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
-        name: 'Sarah Hansen',
-        job: 'Photographer',
-        image: {
-          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Sarah Hansen Image',
-        },
+        title: '卖家俱乐部',
+        description: '加入我们的卖家社群，与1000+企业交流经验，共享优质资源。',
+        icon: 'flat-color-icons:conference-call',
       },
       {
-        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
-        name: 'Mark Wilkinson',
-        job: 'Small business owner',
-        image: {
-          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-          alt: 'Mark Wilkinson Image',
-        },
+        title: '人才输送服务',
+        description: '提供专业人才培养和输送服务，解决企业出海人才短缺问题。',
+        icon: 'flat-color-icons:businessman',
+      },
+      {
+        title: '资源整合对接',
+        description: '整合产业链上下游资源，为企业对接优质供应商和服务商。',
+        icon: 'flat-color-icons:organization',
+      },
+      {
+        title: '平台账号代运营',
+        description: '提供TikTok、YouTube、Instagram等多平台账号托管运营服务。',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: '广告投放优化',
+        description: '作为Google一级代理商，提供专业的广告投放和优化服务。',
+        icon: 'flat-color-icons:podium-with-speaker',
       },
     ]}
-    callToAction={{
-      target: '_blank',
-      text: 'More testimonials...',
-      href: 'https://github.com/arthelokyo/astrowind',
-      icon: 'tabler:chevron-right',
-    }}
   />
 
   <!-- CallToAction Widget *********** -->
-
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Start exploring',
-        href: '/',
+        text: '立即咨询',
+        href: '/contact',
+        icon: 'tabler:message-circle',
+      },
+      {
+        variant: 'secondary',
+        text: '查看案例',
+        href: '/#cases',
       },
     ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
+    title="选择最适合您的服务方案"
+    subtitle="无论您是初次出海，还是希望优化现有业务，我们都能为您提供专业的解决方案"
   />
 </Layout>

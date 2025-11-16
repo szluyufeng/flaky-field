@@ -3,76 +3,154 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: '联系我们 — 巨星出海',
+  description: '联系巨星出海，获取免费咨询服务。深圳沙井总部，专业的跨境培训与品牌孵化机构。',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
+  <HeroText 
+    tagline="联系我们" 
+    title="开启您的出海之旅！" 
+    subtitle="我们随时准备为您提供专业的咨询和服务"
+  />
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
-
+  <!-- ContactUs Widget **************** -->
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="留下您的信息，获取免费咨询"
+    subtitle="我们的专业顾问将在24小时内与您联系，为您量身定制出海方案"
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Name',
+        label: '您的姓名',
+        placeholder: '请输入您的姓名',
+      },
+      {
+        type: 'text',
+        name: 'company',
+        label: '公司名称',
+        placeholder: '请输入您的公司名称',
       },
       {
         type: 'email',
         name: 'email',
-        label: 'Email',
+        label: '邮箱地址',
+        placeholder: '请输入您的邮箱',
+      },
+      {
+        type: 'tel',
+        name: 'phone',
+        label: '联系电话',
+        placeholder: '请输入您的联系电话',
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: '您的需求',
+      placeholder: '请简要描述您的出海需求或想咨询的问题...',
     }}
     disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+      label: '提交此表单即表示您同意我们收集和使用您的个人信息，我们将严格保护您的隐私。',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="我们的咨询团队通常会在24小时内响应您的咨询。"
   />
 
-  <!-- Features2 Widget ************** -->
-
+  <!-- Features2 联系方式 ************** -->
   <Features2
-    title="We are here to help!"
+    title="多种方式联系我们"
+    subtitle="选择最适合您的方式，我们随时为您服务"
+    columns={3}
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+        title: '免费咨询',
+        description: '与我们的专业顾问一对一沟通，了解最适合您的出海方案。无论是TikTok运营、品牌孵化还是跨境咨询，我们都能为您提供专业建议。',
+        icon: 'tabler:message-circle',
       },
       {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+        title: '课程咨询',
+        description: '想了解我们的培训课程？咨询课程内容、培训方式、开课时间等信息。我们提供线上线下多种学习方式，满足不同需求。',
+        icon: 'tabler:school',
       },
       {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+        title: '合作洽谈',
+        description: '寻求商务合作？我们欢迎各类合作机会，包括平台合作、渠道合作、资源共享等。让我们一起助力更多企业出海。',
+        icon: 'tabler:users-group',
       },
       {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
+        title: '联系电话',
+        description: '工作日 9:00-18:00<br/>欢迎致电咨询',
+        icon: 'tabler:phone',
       },
       {
-        title: 'Email',
-        description: 'contact@support.com',
+        title: '邮箱地址',
+        description: 'info@juxingchuhai.com<br/>我们会在24小时内回复',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        title: '公司地址',
+        description: '深圳市宝安区沙井<br/>巨星出海总部',
         icon: 'tabler:map-pin',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Features2 常见问题 ************** -->
+  <Features2
+    title="常见问题"
+    subtitle="快速找到您关心的问题答案"
+    columns={2}
+    items={[
+      {
+        title: '你们提供哪些服务？',
+        description: '我们提供TikTok海外短视频系统实训营、精品课程（线上+线下）、品牌孵化、跨境咨询、账号代运营、广告投放优化等全方位出海服务。',
+      },
+      {
+        title: '培训课程适合什么样的企业？',
+        description: '无论您是跨境电商新手，还是希望优化现有业务的企业，我们的课程都能满足您的需求。我们提供从基础到高级的系统化培训。',
+      },
+      {
+        title: '培训周期是多久？',
+        description: '我们的标准实训营为15天，包含系统化理论学习和实操指导。同时提供每周线上直播和每月线下沙龙的持续学习机会。',
+      },
+      {
+        title: '如何保证培训效果？',
+        description: '我们采用理论+实操的教学方式，配备15年+经验的专业导师，提供真实案例拆解和手把手指导。培训后持续跟踪服务，确保学以致用。',
+      },
+      {
+        title: '你们有哪些成功案例？',
+        description: '我们已服务1000+客户，打造多个千万粉丝账号矩阵，涵盖美甲、家居、母婴、工厂设备等多个行业。详情可查看我们的案例展示。',
+      },
+      {
+        title: '收费标准是怎样的？',
+        description: '我们根据不同的服务类型和企业需求，提供定制化的服务方案。具体收费请联系我们的顾问，我们会为您提供详细的报价。',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction
+    title="准备好开始了吗？"
+    subtitle="立即联系我们，获取免费的出海咨询服务"
+    actions={[
+      {
+        variant: 'primary',
+        text: '填写表单',
+        href: '#form',
+        icon: 'tabler:forms',
+      },
+      {
+        variant: 'secondary',
+        text: '查看服务',
+        href: '/services',
       },
     ]}
   />

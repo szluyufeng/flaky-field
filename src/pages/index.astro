@@ -2,136 +2,140 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
+import Stats from '~/components/widgets/Stats.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: '巨星出海 - 国内领先的跨境培训与品牌孵化机构',
+  description: 'TikTok官方认证全资质机构，已服务1000+客户，打造多个千万粉丝账号矩阵。助力中国品牌出海，创造更多社会就业机会。',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
+  <!-- Hero 首屏区块 ******************* -->
   <Hero
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: '免费咨询',
+        href: '/contact',
+        icon: 'tabler:message-circle',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: '了解更多', href: '#features' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
+      <span class="text-accent dark:text-blue-400">助力中国品牌出海</span><br />
+      <span class="text-5xl md:text-6xl font-bold">巨星出海</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+      <span class="text-lg md:text-xl">
+        国内领先的<span class="font-bold text-blue-600">跨境培训、跨境咨询和品牌孵化</span>专业机构<br />
+        <span class="mt-2 block">TikTok官方认证全资质机构（TSP、TAP、MCN、ADS）</span><br />
+        <span class="mt-2 block text-base">已服务 <span class="font-bold text-blue-600">1000+</span> 客户 · 打造多个<span class="font-bold text-blue-600">千万粉丝</span>账号矩阵</span>
+      </span>
+    </Fragment>
+    
+    <Fragment slot="image">
+      <div class="relative w-full h-[400px] md:h-[500px] bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg shadow-2xl flex items-center justify-center">
+        <div class="text-center text-white">
+          <div class="text-6xl mb-4">🌟</div>
+          <div class="text-3xl font-bold">TikTok官方认证</div>
+          <div class="text-xl mt-2">全资质合作机构</div>
+        </div>
+      </div>
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
+  <!-- Stats 数据展示 ****************** -->
+  <Stats
+    title="用数据说话"
+    subtitle="真实的成绩，见证我们的专业实力"
+    stats={[
+      { title: '服务客户', amount: '1000+', icon: 'tabler:users' },
+      { title: '千万粉丝账号', amount: '多个', icon: 'tabler:star' },
+      { title: '跨境经验', amount: '15年+', icon: 'tabler:trophy' },
+      { title: '专业导师', amount: '数十位', icon: 'tabler:user-check' },
+    ]}
+  />
 
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
-
-  <!-- Features Widget *************** -->
-
+  <!-- Features 四大核心系统 *************** -->
   <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
+    id="training"
+    tagline="核心服务"
+    title="TikTok海外短视频四大系统"
+    subtitle="从定位到变现，全链路系统化培训，助力企业快速掌握TikTok出海运营"
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+        title: '定位系统',
+        description: '科学上网、市场定位、账号定位、内容定位，为您的出海之路打下坚实基础。',
+        icon: 'tabler:target',
       },
       {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+        title: '引流系统',
+        description: '网络呈现、拍摄剪辑、选题文案、运营推广、数据分析，全方位提升流量获取能力。',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
+        title: '裂变系统',
+        description: '矩阵搭建、社媒搭建、小店运营、外联搭建、广告策略，实现指数级增长。',
+        icon: 'tabler:chart-arrows',
       },
       {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+        title: '变现系统',
+        description: '外贸流程、客户调研、转化提升、外联优化、店铺运营、物流回款，打通商业闭环。',
+        icon: 'tabler:cash',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
+  <!-- Content 公司介绍 **************** -->
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="关于巨星出海"
+    title="专业的跨境服务机构"
     items={[
       {
-        title: 'Built on top of Astro 5.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+        title: 'TikTok官方认证全资质',
+        description: '拥有TSP、TAP、MCN、ADS全资质认证，官方授权合作机构。',
       },
       {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+        title: '丰富的实战经验',
+        description: '15年跨境电商经验，从零到一运营TikTok的项目经验。',
       },
       {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+        title: '卓越的服务成果',
+        description: '已服务1000+客户，打造多个千万粉丝账号矩阵。',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        国内领先的跨境培训与品牌孵化机构
+      </h3>
+      <p class="text-lg mb-4">
+        巨星出海总部位于深圳沙井，拥有数十位专业跨境实战运营导师。我们荣获TikTok官方2022年度十大上榜机构品牌，并多次获得跨境电商领域的奖项。
+      </p>
+      <p class="text-lg">
+        <span class="font-bold text-blue-600">我们的使命：</span>助力中国品牌出海，创造更多社会就业机会，与合作伙伴共同成长，构建全球互通的服务生态。
+      </p>
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative w-full h-[400px] bg-gradient-to-br from-indigo-500 to-blue-600 rounded-lg shadow-xl flex items-center justify-center">
+        <div class="text-white text-center">
+          <div class="text-5xl mb-4">🏆</div>
+          <div class="text-2xl font-bold">TikTok 2022年度</div>
+          <div class="text-xl mt-2">十大机构品牌</div>
+        </div>
+      </div>
     </Fragment>
 
     <Fragment slot="bg">
@@ -139,171 +143,73 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
+  <!-- Steps 发展历程 ****************** -->
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="发展历程"
+    subtitle="十余年深耕跨境领域，不断创新与突破"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+        title: '2011年',
+        description: '成立深圳市玩咖科技有限公司，开启跨境电商探索之旅。',
+        icon: 'tabler:flag',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+        title: '2015年',
+        description: '成立跨境电商事业部，开拓全球市场，积累丰富的国际化运营经验。',
+        icon: 'tabler:world',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+        title: '2021年',
+        description: '成立巨星出海，专注企业培训和咨询，助力更多企业出海。',
+        icon: 'tabler:rocket',
       },
       {
-        title: 'Ready!',
-        icon: 'tabler:check',
+        title: '2023年',
+        description: '聚星集团官网正式上线，开启集团业务发展新篇章，服务体系全面升级。',
+        icon: 'tabler:star',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: '发展历程',
     }}
   />
 
-  <!-- Features2 Widget ************** -->
-
+  <!-- Features2 为什么选择我们 ************** -->
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    title="为什么选择巨星出海？"
+    subtitle="六大核心优势，助力您的出海之路"
+    tagline="核心优势"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
+        title: '多维度全方位课程培训',
+        description: '从基础到高级，从理论到实战，系统化的课程体系满足不同阶段企业需求。',
+        icon: 'flat-color-icons:reading',
       },
       {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+        title: '专业团队直接赋能',
+        description: '数十位专业导师，拥有15年跨境经验，手把手教学，助力孵化。',
         icon: 'flat-color-icons:business-contact',
       },
       {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
+        title: '专业咨询顾问一对一指导',
+        description: '配备专属顾问，针对性解决企业出海过程中的痛点和难题。',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: '融入卖家俱乐部，共享资源',
+        description: '加入我们的卖家社群，与1000+企业交流经验，共享优质资源。',
+        icon: 'flat-color-icons:conference-call',
+      },
+      {
+        title: '高效人才支持',
+        description: '提供专业人才培养和输送服务，解决企业出海人才短缺问题。',
+        icon: 'flat-color-icons:businessman',
+      },
+      {
+        title: '资源整合，全生态配套方案',
+        description: '整合产业链上下游资源，提供从培训到运营的一站式解决方案。',
+        icon: 'flat-color-icons:organization',
       },
     ]}
   >
@@ -312,88 +218,252 @@ const metadata = {
     </Fragment>
   </Features2>
 
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
+  <!-- 合作平台 **************** -->
+  <Features2
+    title="合作平台"
+    subtitle="与全球顶级平台深度合作，为您提供最权威的服务"
+    tagline="官方认证"
+    columns={5}
     items={[
       {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+        title: 'TikTok',
+        description: '官方认证MCN、TSP、TAP、ADS全资质合作伙伴',
+        icon: 'tabler:brand-tiktok',
       },
       {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+        title: 'YouTube',
+        description: 'YouTube Shorts官方服务商',
+        icon: 'tabler:brand-youtube',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+        title: 'Google',
+        description: 'Google一级代理商',
+        icon: 'tabler:brand-google',
       },
       {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+        title: 'Amazon',
+        description: '亚马逊跨境品牌百强企业',
+        icon: 'tabler:shopping-cart',
       },
       {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+        title: 'Instagram',
+        description: '多平台整合营销服务',
+        icon: 'tabler:brand-instagram',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- 课程服务 **************** -->
+  <Content
+    id="courses"
+    isAfterContent
+    tagline="精品课程"
+    title="线上线下结合，灵活学习方式"
+    items={[
+      {
+        title: '每月线上落地训练营',
+        description: '15天密集培训，系统学习TikTok运营核心技能。',
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+        title: '每周线上面对面直播',
+        description: '资深导师在线答疑，实时解决运营中的问题。',
+      },
+      {
+        title: '每月线下落地沙龙',
+        description: '面对面交流，深度探讨出海策略和实战经验。',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        多种学习方式，满足不同需求
+      </h3>
+      <p class="text-lg">
+        我们提供线上线下相结合的培训方式，无论您身处何地，都能获得专业的指导和支持。
+      </p>
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative w-full h-[400px] bg-gradient-to-br from-green-500 to-teal-600 rounded-lg shadow-xl flex items-center justify-center">
+        <div class="text-white text-center">
+          <div class="text-5xl mb-4">📚</div>
+          <div class="text-2xl font-bold">系统化培训课程</div>
+          <div class="text-xl mt-2">线上+线下</div>
+        </div>
+      </div>
+    </Fragment>
+  </Content>
+
+  <!-- 成功案例 **************** -->
+  <Features
+    id="cases"
+    title="成功案例"
+    subtitle="真实案例见证，为您的出海之路提供信心"
+    tagline="客户案例"
+    items={[
+      {
+        title: '美甲好物 - 126.6K+粉丝',
+        description: '运营6个月，通过美甲场景和美妆技巧内容分享，成功引导私域转化，实现商业闭环。',
+        icon: 'tabler:paint',
+      },
+      {
+        title: '家居好物 - 169.9K+粉丝',
+        description: '运营12个月，通过家居清洁场景和清洁技巧分享，建立品牌信任，持续引导私域转化。',
+        icon: 'tabler:home',
+      },
+      {
+        title: '母婴商品 - 2M+粉丝',
+        description: '运营15个月，打造千万级粉丝账号，通过母婴类商品视频引流到独立站，实现高效转化。',
+        icon: 'tabler:baby-carriage',
+      },
+      {
+        title: '工厂设备 - 28.9K+粉丝',
+        description: '运营7个月，通过推广工厂车间生产流程和设备，设置邮箱精准询盘，获取高质量B2B客户。',
+        icon: 'tabler:building-factory',
+      },
+      {
+        title: 'TikTok转化 - 33.6W网站访问',
+        description: '三个月内通过视频展示引导网站转化，网站数据达到36.7W美元的营业额，ROI显著。',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: '直播业绩 - 26.3W观看人次',
+        description: '直播单场业绩达16041英镑（折合13.75万元），展现强大的直播带货能力。',
+        icon: 'tabler:video',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features>
+
+  <!-- Testimonials 荣誉资质 ******************* -->
+  <Testimonials
+    title="荣誉与资质"
+    subtitle="官方认可，实力见证"
+    tagline="权威认证"
+    testimonials={[
+      {
+        testimonial: 'TikTok 2022年度十大机构品牌',
+        name: 'TikTok官方',
+        job: '年度荣誉',
+        image: {
+          alt: 'TikTok',
+        },
+      },
+      {
+        testimonial: 'TikTok美区、英区、东南亚官方认证MCN、TAP',
+        name: 'TikTok官方',
+        job: '官方认证',
+        image: {
+          alt: 'MCN认证',
+        },
+      },
+      {
+        testimonial: 'YouTube Shorts官方服务商',
+        name: 'YouTube官方',
+        job: '官方服务商',
+        image: {
+          alt: 'YouTube',
+        },
+      },
+      {
+        testimonial: 'Google一级代理商',
+        name: 'Google',
+        job: '一级代理',
+        image: {
+          alt: 'Google',
+        },
+      },
+      {
+        testimonial: '亚马逊全球中国出口跨境品牌百强',
+        name: '亚马逊',
+        job: '百强品牌',
+        image: {
+          alt: 'Amazon',
+        },
+      },
+      {
+        testimonial: 'TikTok东南亚/英国MCN优秀机构',
+        name: 'TikTok官方',
+        job: '优秀机构',
+        image: {
+          alt: 'TikTok MCN',
+        },
       },
     ]}
   />
 
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
+  <!-- 导师团队 **************** -->
+  <Content
+    isReversed
+    isAfterContent
+    tagline="专业团队"
+    title="资深导师团队"
+    items={[
+      {
+        title: '15年+跨境电商经验',
+        description: '导师团队平均拥有15年以上的跨境电商实战经验。',
+      },
+      {
+        title: 'TikTok全域营销专家',
+        description: '精通TikTok全域营销推广，掌握最新平台玩法和算法规则。',
+      },
+      {
+        title: '服务500+企业',
+        description: '已为超过500家企业提供帮助，助力快速获得短视频营销成果。',
+      },
     ]}
-  />
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        实战派导师，手把手教学
+      </h3>
+      <p class="text-lg">
+        我们的导师不仅拥有丰富的理论知识，更重要的是拥有真实的从零到一运营TikTok的项目经验，能够为您提供最实战、最落地的指导。
+      </p>
+    </Fragment>
 
-  <!-- CallToAction Widget *********** -->
+    <Fragment slot="image">
+      <div class="relative w-full h-[400px] bg-gradient-to-br from-orange-500 to-red-600 rounded-lg shadow-xl flex items-center justify-center">
+        <div class="text-white text-center">
+          <div class="text-5xl mb-4">👨‍🏫</div>
+          <div class="text-2xl font-bold">专业导师团队</div>
+          <div class="text-xl mt-2">15年+经验</div>
+        </div>
+      </div>
+    </Fragment>
+  </Content>
 
+  <!-- CallToAction 行动号召 *********** -->
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: '立即咨询',
+        href: '/contact',
+        icon: 'tabler:message-circle',
+      },
+      {
+        variant: 'secondary',
+        text: '了解服务',
+        href: '/services',
       },
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      准备好开启您的<br class="block sm:hidden" />
+      <span class="sm:whitespace-nowrap text-blue-600">出海之旅了吗？</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      立即联系我们，获取免费咨询服务<br class="hidden md:inline" />
+      让巨星出海成为您的出海加速器
     </Fragment>
   </CallToAction>
 </Layout>
