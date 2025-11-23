@@ -25,6 +25,10 @@ export const headerData = {
           text: '精品课程',
           href: getPermalink('/#courses'),
         },
+        {
+          text: '企业官网建站',
+          href: getPermalink('/landing/enterprise-website'),
+        },
       ],
     },
     {
@@ -48,6 +52,7 @@ export const footerData = {
         { text: '精品课程', href: '/#courses' },
         { text: '品牌孵化', href: '/services' },
         { text: '跨境咨询', href: '/services' },
+        { text: '多国语言企业官网建站', href: '/landing/enterprise-website' },
       ],
     },
     {

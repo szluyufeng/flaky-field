@@ -1,0 +1,484 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: '多国语言企业官网建站服务 - 助力中国制造企业开拓全球市场',
+  description: '专为中小型制造企业打造的多国语言企业官网，10种以上语言覆盖，完善的SEO优化，符合Google最佳实践，全球CDN加速，助力您快速获取海外客户。',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero 首屏 - 震撼开场 ******************* -->
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: '立即咨询',
+        href: '/contact',
+        icon: 'tabler:message-circle',
+      },
+      { text: '查看案例', href: '#cases' },
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="text-blue-600 dark:text-blue-400">全球客户主动找上门</span><br />
+      <span class="text-5xl md:text-6xl font-bold">多国语言企业官网</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="text-lg md:text-xl">
+        <span class="font-bold text-blue-600">不用等客户，让客户主动找您</span><br />
+        <span class="mt-3 block">10种以上语言 · 全球SEO优化 · 24小时自动获客</span><br />
+        <span class="mt-3 block text-base">
+          专为<span class="font-bold">中国制造企业</span>量身定制 · 
+          <span class="font-bold text-blue-600">30天</span>即可上线 · 
+          已帮助<span class="font-bold text-blue-600">200+</span>企业成功出海
+        </span>
+      </span>
+    </Fragment>
+    
+    <Fragment slot="image">
+      <div class="relative w-full h-[400px] md:h-[500px] rounded-lg shadow-2xl overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600">
+        <div class="absolute inset-0 flex items-center justify-center text-white">
+          <div class="text-center">
+            <div class="text-6xl mb-6">🌍</div>
+            <div class="text-4xl font-bold mb-4">触达全球客户</div>
+            <div class="text-xl">您的全球门户，从这里开始</div>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+  </Hero>
+
+  <!-- Stats 数据展示 - 建立信任 ****************** -->
+  <Stats
+    title="用数据说话"
+    subtitle="真实的成绩，证明我们的专业实力"
+    stats={[
+      { title: '服务企业', amount: '200+', icon: 'tabler:building-factory' },
+      { title: '覆盖语言', amount: '10+', icon: 'tabler:world' },
+      { title: '平均上线时间', amount: '30天', icon: 'tabler:clock' },
+      { title: '客户询盘增长', amount: '60%+', icon: 'tabler:trending-up' },
+    ]}
+  />
+
+  <!-- Content 痛点唤醒 - 为什么需要企业官网 **************** -->
+  <Content
+    tagline="为什么需要企业官网？"
+    title="没有官网，您正在错失海外订单"
+    isReversed
+    items={[
+      {
+        title: '您的工厂再好，客户看不到',
+        description: '海外客户在Google搜索产品时，找不到您的信息，所有订单都流向了有官网的竞争对手。',
+        icon: 'tabler:eye-off',
+      },
+      {
+        title: 'B2B平台竞争激烈，利润被压榨',
+        description: '阿里巴巴、环球资源上同行扎堆，客户货比三家压价，利润空间越来越小。',
+        icon: 'tabler:arrow-down',
+      },
+      {
+        title: '参加展会没效果，客户记不住',
+        description: '展会上发了名片，客户回去一搜没有官网，觉得企业不专业，后续跟进困难。',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: '没有官网，就像工厂没有厂房',
+        description: '企业官网是您的网上门户，代表企业形象和实力，是赢得客户信任的第一步。',
+        icon: 'tabler:home-question',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        没有官网 = 拒绝90%的海外商机
+      </h3>
+      <p class="text-lg mb-4">
+        据统计，<span class="font-bold text-red-600">93%的海外采购商</span>在决定合作前，
+        都会先通过Google搜索供应商的官网，了解企业实力和产品信息。
+      </p>
+      <p class="text-lg text-blue-600 font-bold">
+        有官网的企业，获客成本降低70%，询盘质量提升5倍！
+      </p>
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative w-full h-[400px] rounded-lg shadow-xl flex items-center justify-center overflow-hidden" style="background: linear-gradient(to bottom right, #ef4444, #ea580c);">
+        <div class="text-white text-center p-8">
+          <div class="text-5xl mb-4">⚠️</div>
+          <div class="text-3xl font-bold mb-3">每天都在流失订单</div>
+          <div class="text-xl">客户搜索产品 → 找不到您 → 选择竞争对手</div>
+        </div>
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content 解决方案 - 企业官网的价值 **************** -->
+  <Content
+    tagline="企业官网的核心价值"
+    title="有了多国语言官网，客户主动找上门"
+    items={[
+      {
+        title: '全球搜索引擎24小时为您获客',
+        description: 'Google、必应、雅虎等搜索引擎收录您的网站，客户搜索产品关键词时自动展示，精准获取有需求的客户。',
+        icon: 'tabler:search',
+      },
+      {
+        title: '没有同行竞争，独享客户咨询',
+        description: '不像B2B平台，您的官网只展示自己的产品，客户不会货比三家压价，询盘转化率提升3-5倍。',
+        icon: 'tabler:medal',
+      },
+      {
+        title: '展会、开发信效果翻倍',
+        description: '配合展会名片、邮件开发、社媒推广，客户访问官网深度了解企业实力，大幅提升信任度和合作率。',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: '建立品牌形象，提升溢价能力',
+        description: '专业的多语言官网展现企业实力，让客户感受到品牌价值，愿意支付更高价格，摆脱价格战。',
+        icon: 'tabler:crown',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        一次投入，持续获客10年
+      </h3>
+      <p class="text-lg mb-4">
+        企业官网是您的<span class="font-bold text-blue-600">永久资产</span>，
+        不像B2B平台年年续费，官网一次投入，长期受益。
+      </p>
+      <p class="text-lg">
+        <span class="font-bold">投资回报率（ROI）：</span>
+        平均3-6个月回本，之后每个订单都是纯利润增长。
+      </p>
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative w-full h-[400px] bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg shadow-xl flex items-center justify-center">
+        <div class="text-white text-center p-8">
+          <div class="text-5xl mb-4">📈</div>
+          <div class="text-3xl font-bold mb-3">询盘数量暴增</div>
+          <div class="text-xl">每月自动获取10-50个精准询盘</div>
+          <div class="text-sm mt-4 opacity-90">（数据来自200+真实客户平均值）</div>
+        </div>
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-green-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features 我们的核心竞争力 *************** -->
+  <Features
+    id="advantages"
+    tagline="为什么选择我们"
+    title="六大核心竞争力，让您的官网脱颖而出"
+    subtitle="我们不只是建网站，更是帮您获取全球客户"
+    items={[
+      {
+        title: '10+国语言全覆盖，触达全球市场',
+        description: '英语、德语、法语、西班牙语、日语、韩语、阿拉伯语等主流语言，精准翻译专业术语，让全球客户都能看懂。',
+        icon: 'tabler:world-www',
+      },
+      {
+        title: '完善的SEO基础，排名自然靠前',
+        description: '每种语言独立SEO优化，多语言SEO叠加效果，让您的网站在Google各国搜索结果中排名更高，自然流量翻倍。',
+        icon: 'tabler:seo',
+      },
+      {
+        title: '符合Google制造业最佳实践',
+        description: '严格遵循Google对制造型企业官网的标准，页面结构、内容布局、产品展示都经过优化，更容易被收录和推荐。',
+        icon: 'tabler:checklist',
+      },
+      {
+        title: '工业美学设计，符合全球审美',
+        description: '参考德国、日本制造业巨头官网设计，简洁专业、突出产品，符合B2B客户审美习惯，提升品牌信任度。',
+        icon: 'tabler:palette',
+      },
+      {
+        title: '顶级技术架构，全球极速访问',
+        description: 'Astro框架+全球CDN加速，无论客户在哪个国家，打开速度都在2秒内，HTTPS安全加密，保护企业和客户信息。',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: '移动端完美适配，随时随地展示',
+        description: '手机、平板、电脑自适应，客户用任何设备访问都完美展示，不错失任何一个商机。',
+        icon: 'tabler:device-mobile',
+      },
+    ]}
+  />
+
+  <!-- Features2 核心功能详解 ************** -->
+  <Features2
+    title="功能全面，真正为制造企业量身定制"
+    subtitle="不是简单的模板套用，而是深度理解制造业需求"
+    tagline="核心功能"
+    columns={2}
+    items={[
+      {
+        title: '企业实力展示',
+        description: '公司介绍、生产车间、荣誉资质、合作客户，全方位展现企业实力，建立客户信任。',
+        icon: 'tabler:building-factory',
+      },
+      {
+        title: '产品展示系统',
+        description: '多级分类、高清大图、参数表格、视频演示，让客户全方位了解产品细节，增强购买信心。',
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: '新闻动态模块',
+        description: '展会信息、行业动态、公司新闻，保持网站活跃度，提升SEO排名，增强客户信任。',
+        icon: 'tabler:news',
+      },
+      {
+        title: '智能询盘表单',
+        description: '多语言表单，自动邮件提醒，询盘信息分类管理，不错过任何一个潜在客户。',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Steps 服务流程 ****************** -->
+  <Steps
+    title="30天上线流程"
+    subtitle="专业团队全程服务，省心省力"
+    items={[
+      {
+        title: '第1-3天：需求沟通',
+        description: '深度了解您的产品、目标市场、竞争对手，制定专属建站方案和内容规划。',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: '第4-7天：素材及设计确认',
+        description: '根据您的行业特点和品牌调性，设计官网首页和内页效果图，修改至您满意为止。',
+        icon: 'tabler:palette',
+      },
+      {
+        title: '第8-20天：开发建设',
+        description: '前端开发、多语言翻译、SEO优化同步进行，保证质量和进度。',
+        icon: 'tabler:code',
+      },
+      {
+        title: '第21-25天：内容填充',
+        description: '协助您整理产品信息、公司介绍、新闻资讯等内容，专业翻译成多国语言。',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: '第26-28天：测试优化',
+        description: '全面测试各语言版本、各种设备兼容性、询盘表单、加载速度等，确保完美上线。',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: '第29-30天：正式上线',
+        description: '绑定域名、提交搜索引擎、设置分析工具，培训您使用后台管理系统。',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: '30天上线流程',
+    }}
+  />
+
+  <!-- Testimonials 客户案例 ******************* -->
+  <Testimonials
+    id="cases"
+    title="真实客户案例"
+    subtitle="他们通过官网，成功开拓了全球市场"
+    tagline="成功案例"
+    testimonials={[
+      {
+        testimonial: '上线3个月，每周都能收到5-8个询盘，其中60%来自德国和美国。现在不用到处找客户了，客户主动找我们，而且都是精准需求。',
+        name: '张总',
+        job: '东莞某精密模具企业',
+        image: {
+          alt: '客户案例1',
+        },
+      },
+      {
+        testimonial: '参加德国展会时，把官网印在名片上，客户当场就打开看，觉得我们很专业。展会后跟进的客户转化率比以前高了3倍，投资回报率太高了！',
+        name: '李总',
+        job: '深圳某机械设备企业',
+        image: {
+          alt: '客户案例2',
+        },
+      },
+      {
+        testimonial: '原来在阿里巴巴上竞争太激烈，客户总是压价。现在有了自己的官网，客户觉得我们是品牌供应商，价格接受度高多了，利润率提升了40%。',
+        name: '王总',
+        job: '宁波某五金工具企业',
+        image: {
+          alt: '客户案例3',
+        },
+      },
+      {
+        testimonial: '最惊喜的是日本客户，他们看到日语版官网后，觉得我们很重视日本市场，主动下了大单。多语言真的很有用，让客户感受到被尊重。',
+        name: '陈总',
+        job: '广州某电子元件企业',
+        image: {
+          alt: '客户案例4',
+        },
+      },
+      {
+        testimonial: 'Google搜索我们产品的关键词，前三页都能看到我们的网站，多语言SEO效果太好了。现在每天都有自然流量，不用花钱打广告。',
+        name: '周总',
+        job: '上海某汽配企业',
+        image: {
+          alt: '客户案例5',
+        },
+      },
+      {
+        testimonial: '之前觉得建官网很复杂，没想到30天就上线了，而且后台操作很简单，我们自己就能更新产品和新闻。服务团队很专业，响应很快。',
+        name: '刘总',
+        job: '苏州某包装机械企业',
+        image: {
+          alt: '客户案例6',
+        },
+      },
+    ]}
+  />
+
+  <!-- Content 对比优势 **************** -->
+  <Content
+    isReversed
+    isAfterContent
+    tagline="对比优势"
+    title="为什么不选择B2B平台？"
+    items={[
+      {
+        title: 'B2B平台：同行扎堆，价格战激烈',
+        description: '阿里巴巴、环球资源上同类产品几百上千家，客户货比三家，只能拼价格，利润越来越薄。',
+      },
+      {
+        title: '企业官网：独立展示，没有竞争',
+        description: '您的官网只展示自己的产品，客户进来后不会看到同行，专注了解您的优势，转化率自然更高。',
+      },
+      {
+        title: 'B2B平台：年年续费，成本高昂',
+        description: '平台会员费每年几万元，还要购买推广位，长期投入大，一旦停止续费，积累的流量全部归零。',
+      },
+      {
+        title: '企业官网：一次投资，长期受益',
+        description: '官网是您的永久资产，一次投入后每年只需几千元维护费，SEO流量持续增长，越用越划算。',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        B2B平台 + 企业官网 = 双管齐下效果最佳
+      </h3>
+      <p class="text-lg">
+        我们建议：<span class="font-bold text-blue-600">保留B2B平台作为辅助渠道，重点建设企业官网</span>。
+        B2B平台负责快速曝光，企业官网负责品牌建设和深度转化，两者结合才是最佳策略。
+      </p>
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative w-full h-[400px] bg-gradient-to-br from-purple-500 to-indigo-600 rounded-lg shadow-xl flex items-center justify-center">
+        <div class="text-white text-center p-8">
+          <div class="text-5xl mb-4">💎</div>
+          <div class="text-3xl font-bold mb-3">企业官网</div>
+          <div class="text-xl">您的品牌资产，永久增值</div>
+        </div>
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- FAQs 常见问题 ******************* -->
+  <FAQs
+    title="常见问题解答"
+    subtitle="解答您的疑虑，帮您做出正确决策"
+    tagline="FAQ"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '我们是小工厂，有必要建官网吗？',
+        description: '非常有必要！海外客户不会因为您是小工厂就不找您，反而会因为没有官网觉得您不专业而放弃合作。很多小工厂通过官网获得了大客户，因为官网让您看起来更专业、更值得信赖。',
+      },
+      {
+        title: '建站需要多少钱？性价比高吗？',
+        description: '我们的多国语言官网建站费用在2-5万元（根据语言数量和功能需求），相比B2B平台每年几万元的会员费，官网一次投入，长期使用。平均3-6个月回本，之后都是纯利润增长，性价比非常高。',
+      },
+      {
+        title: '我不懂技术，能自己管理网站吗？',
+        description: '完全可以！我们提供简单易用的后台管理系统，就像使用Word一样简单。我们会提供详细的培训和使用手册，并提供长期技术支持，随时解答您的问题。',
+      },
+      {
+        title: '多语言翻译准确吗？会不会出错？',
+        description: '我们采用人工翻译+AI辅助的方式，由专业译员翻译，特别是行业专业术语，确保准确无误。所有翻译内容都会经过您的确认才上线，不用担心翻译质量。',
+      },
+      {
+        title: 'SEO优化多久能看到效果？',
+        description: 'Google收录一般需要1-3个月，开始获得自然流量需要3-6个月。但我们的多语言SEO优化，每种语言都会带来流量，叠加效果明显。配合Google Ads等付费推广，可以立即获得流量和询盘。',
+      },
+      {
+        title: '后期维护费用是多少？',
+        description: '后期维护费用很低，每年只需2000-5000元，包括域名续费、服务器费用、技术支持、安全更新等。您也可以选择自己维护，我们提供完整的技术文档。',
+      },
+      {
+        title: '我们已经有中文官网了，能直接翻译吗？',
+        description: '可以参考您的中文官网，但不能简单翻译。海外客户的浏览习惯、审美偏好、关注重点都和国内不同。我们会根据目标市场特点，重新设计布局和内容，确保符合海外客户需求。',
+      },
+      {
+        title: '如果效果不好怎么办？',
+        description: '我们有200+成功案例，对效果非常有信心。我们会在项目开始前，充分分析您的产品和市场，制定合理的预期。同时，我们提供长期的优化服务，持续提升网站效果。',
+      },
+    ]}
+  />
+
+  <!-- CallToAction 最终行动号召 *********** -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: '立即咨询建站方案',
+        href: '/contact',
+        icon: 'tabler:message-circle',
+      },
+      {
+        variant: 'secondary',
+        text: '查看更多成功案例',
+        href: '#cases',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      不要再让订单流向竞争对手<br class="block sm:hidden" />
+      <span class="sm:whitespace-nowrap text-blue-600">现在就开始建设您的全球门户</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="font-bold text-xl">前30名咨询客户，享受限时优惠：</span><br />
+      <span class="text-lg">· 赠送价值5000元的Google Ads推广费</span><br />
+      <span class="text-lg">· 赠送首年域名和服务器费用</span><br />
+      <br class="hidden md:inline" />
+      <span class="text-base text-gray-600 dark:text-gray-400 mt-4 block">立即联系我们，获取免费建站方案和行业案例</span>
+    </Fragment>
+  </CallToAction>
+</Layout>
+
