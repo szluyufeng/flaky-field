@@ -36,6 +36,10 @@ export const headerData = {
       href: getPermalink('/#cases'),
     },
     {
+      text: '新闻',
+      href: getBlogPermalink(),
+    },
+    {
       text: '联系我们',
       href: getPermalink('/contact'),
     },
