@@ -23,38 +23,95 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: '立即咨询',
+        text: '预约建站咨询',
         href: '/contact',
-        icon: 'tabler:message-circle',
+        icon: 'tabler:calendar-event',
       },
-      { text: '查看案例', href: '#cases' },
+      { 
+        text: '查看真实案例', 
+        href: '#cases', 
+        variant: 'secondary',
+        class: 'border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 hover:bg-blue-50 dark:hover:bg-blue-900/20'
+      },
     ]}
   >
     <Fragment slot="title">
-      <span class="text-blue-600 dark:text-blue-400">全球客户主动找上门</span><br />
-      <span class="text-5xl md:text-6xl font-bold">多国语言企业官网</span>
+      <span class="text-gray-900 dark:text-white tracking-tight">不仅仅是建站</span><br />
+      <span class="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-blue-600 to-blue-400">打造24H获客的多语言企业官网</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="text-lg md:text-xl">
-        <span class="font-bold text-blue-600">不用等客户，让客户主动找您</span><br />
-        <span class="mt-3 block">10种以上语言 · 全球SEO优化 · 24小时自动获客</span><br />
-        <span class="mt-3 block text-base">
-          专为<span class="font-bold">中国制造企业</span>量身定制 · 
-          <span class="font-bold text-blue-600">30天</span>即可上线 · 
-          已帮助<span class="font-bold text-blue-600">200+</span>企业成功出海
-        </span>
-      </span>
+      <div class="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl mx-auto mb-8">
+        别让您的工厂在海外互联网上"隐形"。我们为您构建<span class="font-semibold text-blue-700 dark:text-blue-400">符合Google收录标准</span>的多语言官网，让全球采购商搜得到、看得懂、留得下。
+        
+        <div class="flex flex-wrap justify-center gap-4 mt-6 mb-4 text-sm font-medium text-slate-500">
+           <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-green-500"></span> 10+ 语种覆盖</span>
+           <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-blue-500"></span> Google SEO 架构</span>
+           <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-purple-500"></span> 询盘转化导向</span>
+        </div>
+      </div>
     </Fragment>
     
     <Fragment slot="image">
-      <div class="relative w-full h-[400px] md:h-[500px] rounded-lg shadow-2xl overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600">
-        <div class="absolute inset-0 flex items-center justify-center text-white">
-          <div class="text-center">
-            <div class="text-6xl mb-6">🌍</div>
-            <div class="text-4xl font-bold mb-4">触达全球客户</div>
-            <div class="text-xl">您的全球门户，从这里开始</div>
-          </div>
+      <div class="relative w-full max-w-5xl mx-auto group">
+        <!-- Decoration Gradients -->
+        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
+        
+        <!-- Main Interface Container -->
+        <div class="relative rounded-xl shadow-2xl overflow-hidden bg-slate-900 border border-slate-800">
+           <!-- Browser Chrome -->
+           <div class="h-8 bg-slate-800 flex items-center px-4 gap-2 border-b border-slate-700">
+             <div class="w-3 h-3 rounded-full bg-red-500"></div>
+             <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+             <div class="w-3 h-3 rounded-full bg-green-500"></div>
+             <div class="ml-4 flex-1 h-5 bg-slate-900/50 rounded-md text-[10px] text-slate-500 flex items-center px-2 font-mono">
+               your-company.com
+             </div>
+           </div>
+           
+           <!-- Content Preview Area (Abstract Representation) -->
+           <div class="p-8 md:p-12 grid md:grid-cols-2 gap-12 items-center bg-gradient-to-br from-slate-900 to-slate-800">
+             <div class="space-y-6">
+               <div class="space-y-3">
+                 <div class="h-8 w-32 bg-blue-600/20 rounded-lg border border-blue-500/30 flex items-center px-3 text-blue-400 text-xs font-mono animate-pulse">Global Traffic</div>
+                 <h3 class="text-3xl font-bold text-white leading-tight">让世界看见<br/><span class="text-blue-500">中国制造</span>的力量</h3>
+                 <p class="text-slate-400 text-sm">打破B2B平台内卷，建立独立品牌私域。</p>
+               </div>
+               
+               <!-- Data Floating Cards -->
+               <div class="grid grid-cols-2 gap-3">
+                 <div class="bg-white/5 backdrop-blur p-3 rounded-lg border border-white/10">
+                    <div class="text-2xl font-bold text-white">300%</div>
+                    <div class="text-[10px] text-slate-400 uppercase tracking-wider">询盘增长</div>
+                 </div>
+                 <div class="bg-white/5 backdrop-blur p-3 rounded-lg border border-white/10">
+                    <div class="text-2xl font-bold text-white">Top 3</div>
+                    <div class="text-[10px] text-slate-400 uppercase tracking-wider">Google排名</div>
+                 </div>
+               </div>
+             </div>
+             
+             <!-- Abstract Globe/Network Visual -->
+             <div class="relative h-64 w-full flex items-center justify-center">
+                <div class="absolute inset-0 bg-blue-500/10 rounded-full blur-3xl"></div>
+                <div class="relative z-10 grid grid-cols-2 gap-4">
+                   <div class="p-4 bg-slate-800 rounded-lg border border-slate-700 shadow-lg transform rotate-[-6deg] hover:rotate-0 transition-transform duration-500 mt-8">
+                      <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xl">🇩🇪</span> <span class="text-white text-sm font-bold">Germany</span>
+                      </div>
+                      <div class="h-2 w-24 bg-slate-700 rounded full mb-1"></div>
+                      <div class="h-2 w-16 bg-slate-700 rounded full"></div>
+                   </div>
+                   <div class="p-4 bg-slate-800 rounded-lg border border-slate-700 shadow-lg transform rotate-[6deg] hover:rotate-0 transition-transform duration-500">
+                      <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xl">🇺🇸</span> <span class="text-white text-sm font-bold">USA</span>
+                      </div>
+                      <div class="h-2 w-24 bg-slate-700 rounded full mb-1"></div>
+                      <div class="h-2 w-16 bg-slate-700 rounded full"></div>
+                   </div>
+                </div>
+             </div>
+           </div>
         </div>
       </div>
     </Fragment>
@@ -62,303 +119,357 @@ const metadata = {
 
   <!-- Stats 数据展示 - 建立信任 ****************** -->
   <Stats
-    title="用数据说话"
-    subtitle="真实的成绩，证明我们的专业实力"
+    title="Real Results"
+    subtitle="不讲空话，只看真实交付的数据成果"
     stats={[
-      { title: '服务企业', amount: '200+', icon: 'tabler:building-factory' },
-      { title: '覆盖语言', amount: '10+', icon: 'tabler:world' },
-      { title: '平均上线时间', amount: '30天', icon: 'tabler:clock' },
-      { title: '客户询盘增长', amount: '60%+', icon: 'tabler:trending-up' },
+      { title: 'Manufacturing Clients', amount: '200+', icon: 'tabler:building-factory' },
+      { title: 'Global Languages', amount: '10+', icon: 'tabler:world' },
+      { title: 'Avg. Launch Time', amount: '30 Days', icon: 'tabler:clock' },
+      { title: 'Inquiry Growth', amount: '60%+', icon: 'tabler:trending-up' },
     ]}
-  />
+  >
+     <Fragment slot="bg">
+      <div class="absolute inset-0 bg-slate-50 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800"></div>
+    </Fragment>
+  </Stats>
 
   <!-- Content 痛点唤醒 - 为什么需要企业官网 **************** -->
   <Content
-    tagline="为什么需要企业官网？"
-    title="没有官网，您正在错失海外订单"
     isReversed
     items={[
       {
-        title: '您的工厂再好，客户看不到',
-        description: '海外客户在Google搜索产品时，找不到您的信息，所有订单都流向了有官网的竞争对手。',
-        icon: 'tabler:eye-off',
+        title: '隐形冠军的困境',
+        description: '您的工厂技术一流，但在Google上却"查无此人"。海外采购商习惯通过搜索引擎寻找供应商，没有官网意味着直接放弃了93%的主动搜索流量。',
+        icon: 'tabler:ghost',
       },
       {
-        title: 'B2B平台竞争激烈，利润被压榨',
-        description: '阿里巴巴、环球资源上同行扎堆，客户货比三家压价，利润空间越来越小。',
-        icon: 'tabler:arrow-down',
+        title: '平台内卷的红海',
+        description: 'B2B平台上数千家同行同台竞技，被迫卷入价格战，利润空间被无限压缩。您需要一个没有竞争对手的私域主场。',
+        icon: 'tabler:trending-down',
       },
       {
-        title: '参加展会没效果，客户记不住',
-        description: '展会上发了名片，客户回去一搜没有官网，觉得企业不专业，后续跟进困难。',
-        icon: 'tabler:calendar-event',
-      },
-      {
-        title: '没有官网，就像工厂没有厂房',
-        description: '企业官网是您的网上门户，代表企业形象和实力，是赢得客户信任的第一步。',
-        icon: 'tabler:home-question',
+        title: '信任建立的基石',
+        description: '官网是企业的数字门面。对于无法实地考察的海外客户，一个专业、多语言的官网是建立初步信任、展示企业实力的唯一窗口。',
+        icon: 'tabler:shield-check',
       },
     ]}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        没有官网 = 拒绝90%的海外商机
+      <div class="mb-4">
+        <span class="text-xs font-bold tracking-widest text-red-600 uppercase bg-red-100 dark:bg-red-900/30 px-2 py-1 rounded">Pain Points</span>
+      </div>
+      <h3 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4">
+        如果没有独立官网<br/>您的企业正在<span class="text-red-600">错失良机</span>
       </h3>
-      <p class="text-lg mb-4">
-        据统计，<span class="font-bold text-red-600">93%的海外采购商</span>在决定合作前，
-        都会先通过Google搜索供应商的官网，了解企业实力和产品信息。
+      <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+        在这个数字化采购的时代，**"酒香也怕巷子深"**。仅仅依靠展会和B2B平台，已经无法满足现代采购商的搜索习惯。
       </p>
-      <p class="text-lg text-blue-600 font-bold">
-        有官网的企业，获客成本降低70%，询盘质量提升5倍！
-      </p>
-    </Fragment>
-
-    <Fragment slot="image">
-      <div class="relative w-full h-[400px] rounded-lg shadow-xl flex items-center justify-center overflow-hidden" style="background: linear-gradient(to bottom right, #ef4444, #ea580c);">
-        <div class="text-white text-center p-8">
-          <div class="text-5xl mb-4">⚠️</div>
-          <div class="text-3xl font-bold mb-3">每天都在流失订单</div>
-          <div class="text-xl">客户搜索产品 → 找不到您 → 选择竞争对手</div>
-        </div>
+      <div class="p-4 bg-red-50 dark:bg-red-900/10 border-l-4 border-red-500 rounded-r-lg">
+        <p class="text-base text-red-800 dark:text-red-200 italic">
+          "据 B2B International 统计，93% 的企业采购决策始于在线搜索。如果在第一步就缺席，您将永远无法进入采购商的候选名单。"
+        </p>
       </div>
     </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    <Fragment slot="image">
+       <div class="relative group">
+          <div class="absolute -inset-2 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-500"></div>
+          <div class="relative bg-white dark:bg-slate-800 rounded-xl shadow-xl overflow-hidden border border-slate-100 dark:border-slate-700 p-8 flex flex-col items-center text-center">
+             <div class="w-20 h-20 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mb-6">
+                <span class="text-4xl">📉</span>
+             </div>
+             <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2">流量漏斗的缺失</h4>
+             <p class="text-slate-500 text-sm mb-6">所有商机都在Google搜索框中产生，而您的竞争对手正在那里等待客户。</p>
+             
+             <div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+                <div class="h-full bg-red-500 w-[7%]" title="仅依靠传统渠道覆盖率"></div>
+             </div>
+             <div class="flex justify-between w-full text-xs text-slate-400 mt-2">
+                <span>传统渠道覆盖 7%</span>
+                <span>错失商机 93%</span>
+             </div>
+          </div>
+       </div>
     </Fragment>
   </Content>
 
   <!-- Content 解决方案 - 企业官网的价值 **************** -->
   <Content
-    tagline="企业官网的核心价值"
-    title="有了多国语言官网，客户主动找上门"
     items={[
       {
-        title: '全球搜索引擎24小时为您获客',
-        description: 'Google、必应、雅虎等搜索引擎收录您的网站，客户搜索产品关键词时自动展示，精准获取有需求的客户。',
-        icon: 'tabler:search',
+        title: '24小时全球业务员',
+        description: 'Google不睡觉，您的官网也不打烊。无论您在睡觉还是度假，多语言官网都在全球各地为您接待客户、展示产品。',
+        icon: 'tabler:clock-24',
       },
       {
-        title: '没有同行竞争，独享客户咨询',
-        description: '不像B2B平台，您的官网只展示自己的产品，客户不会货比三家压价，询盘转化率提升3-5倍。',
-        icon: 'tabler:medal',
+        title: '品牌溢价的加速器',
+        description: '摆脱"中国制造=廉价"的刻板印象。通过工业级的美学设计和专业的内容呈现，让客户认可您的品牌价值，接受更高的报价。',
+        icon: 'tabler:premium-rights',
       },
       {
-        title: '展会、开发信效果翻倍',
-        description: '配合展会名片、邮件开发、社媒推广，客户访问官网深度了解企业实力，大幅提升信任度和合作率。',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: '建立品牌形象，提升溢价能力',
-        description: '专业的多语言官网展现企业实力，让客户感受到品牌价值，愿意支付更高价格，摆脱价格战。',
-        icon: 'tabler:crown',
+        title: '私域流量的蓄水池',
+        description: '将展会、社媒、邮件开发的所有流量汇聚到官网。在这里，客户只属于您一个人，没有比价干扰，只有深度沟通。',
+        icon: 'tabler:database-import',
       },
     ]}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        一次投入，持续获客10年
+      <div class="mb-4">
+        <span class="text-xs font-bold tracking-widest text-green-600 uppercase bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded">Value Proposition</span>
+      </div>
+      <h3 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4">
+        不仅是展示，更是<span class="text-green-600">获客引擎</span>
       </h3>
-      <p class="text-lg mb-4">
-        企业官网是您的<span class="font-bold text-blue-600">永久资产</span>，
-        不像B2B平台年年续费，官网一次投入，长期受益。
+      <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+        我们构建的不是静态的电子画册，而是一个具备**SEO自生长能力**的营销系统。它像一棵树，随着时间推移，根系（关键词排名）越扎越深，果实（自然询盘）越来越多。
       </p>
-      <p class="text-lg">
-        <span class="font-bold">投资回报率（ROI）：</span>
-        平均3-6个月回本，之后每个订单都是纯利润增长。
-      </p>
-    </Fragment>
-
-    <Fragment slot="image">
-      <div class="relative w-full h-[400px] bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg shadow-xl flex items-center justify-center">
-        <div class="text-white text-center p-8">
-          <div class="text-5xl mb-4">📈</div>
-          <div class="text-3xl font-bold mb-3">询盘数量暴增</div>
-          <div class="text-xl">每月自动获取10-50个精准询盘</div>
-          <div class="text-sm mt-4 opacity-90">（数据来自200+真实客户平均值）</div>
-        </div>
+      
+      <div class="grid grid-cols-2 gap-4 mt-8">
+          <div class="bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
+             <div class="text-3xl font-bold text-green-600 mb-1">ROI</div>
+             <div class="text-sm text-slate-500">3-6个月平均回本周期</div>
+          </div>
+          <div class="bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
+             <div class="text-3xl font-bold text-green-600 mb-1">∞</div>
+             <div class="text-sm text-slate-500">永久资产，无需年费</div>
+          </div>
       </div>
     </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-green-50 dark:bg-transparent"></div>
+    <Fragment slot="image">
+      <div class="relative group">
+         <div class="absolute -inset-2 bg-gradient-to-r from-green-400 to-emerald-600 rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-500"></div>
+         <div class="relative bg-white dark:bg-slate-800 rounded-xl shadow-2xl overflow-hidden border border-slate-100 dark:border-slate-700">
+            <!-- Header -->
+            <div class="h-12 bg-slate-50 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between px-4">
+               <div class="flex gap-1.5">
+                  <div class="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
+                  <div class="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
+                  <div class="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
+               </div>
+               <div class="text-xs font-mono text-slate-400">analytics.google.com</div>
+               <div></div>
+            </div>
+            <!-- Chart Area -->
+            <div class="p-6">
+               <div class="flex items-end gap-2 h-40 mb-2">
+                  <div class="w-1/6 bg-green-100 dark:bg-green-900/20 h-[20%] rounded-t mx-auto relative group/bar">
+                     <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover/bar:opacity-100 transition">Month 1</div>
+                  </div>
+                  <div class="w-1/6 bg-green-200 dark:bg-green-900/30 h-[35%] rounded-t mx-auto relative group/bar">
+                     <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover/bar:opacity-100 transition">Month 2</div>
+                  </div>
+                  <div class="w-1/6 bg-green-300 dark:bg-green-900/40 h-[45%] rounded-t mx-auto relative group/bar">
+                     <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover/bar:opacity-100 transition">Month 3</div>
+                  </div>
+                  <div class="w-1/6 bg-green-400 dark:bg-green-900/50 h-[60%] rounded-t mx-auto relative group/bar">
+                     <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover/bar:opacity-100 transition">Month 4</div>
+                  </div>
+                  <div class="w-1/6 bg-green-500 dark:bg-green-600 h-[80%] rounded-t mx-auto relative group/bar">
+                     <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover/bar:opacity-100 transition">Month 5</div>
+                  </div>
+                  <div class="w-1/6 bg-green-600 dark:bg-green-500 h-[95%] rounded-t mx-auto relative group/bar">
+                     <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-xs py-1 px-2 rounded opacity-0 group-hover/bar:opacity-100 transition">Month 6</div>
+                  </div>
+               </div>
+               <div class="border-t border-slate-200 dark:border-slate-700 pt-2 flex justify-between text-xs text-slate-400">
+                  <span>Start</span>
+                  <span>Growth</span>
+               </div>
+               <div class="mt-4 flex items-center justify-center gap-2 text-green-600 font-bold bg-green-50 dark:bg-green-900/10 py-2 rounded-lg">
+                  <span>📈 自然流量持续增长</span>
+               </div>
+            </div>
+         </div>
+      </div>
     </Fragment>
   </Content>
 
   <!-- Features 我们的核心竞争力 *************** -->
   <Features
     id="advantages"
-    tagline="为什么选择我们"
-    title="六大核心竞争力，让您的官网脱颖而出"
-    subtitle="我们不只是建网站，更是帮您获取全球客户"
+    tagline="Why Choose Us"
+    title="我们不只是建站公司<br/>我们是<span class='text-blue-600'>出海增长伙伴</span>"
+    subtitle="市面上90%的建站公司只懂代码不懂外贸，或者只懂设计不懂SEO。<br/>我们懂代码、懂设计，更懂如何帮中国工厂拿订单。"
     items={[
       {
-        title: '10+国语言全覆盖，触达全球市场',
-        description: '英语、德语、法语、西班牙语、日语、韩语、阿拉伯语等主流语言，精准翻译专业术语，让全球客户都能看懂。',
-        icon: 'tabler:world-www',
+        title: 'Native-Level 多语种内容',
+        description: '告别"机翻"带来的尴尬。我们拥有母语级翻译团队，确保您的产品描述地道、专业，符合目标国客户的阅读习惯。',
+        icon: 'tabler:language',
       },
       {
-        title: '完善的SEO基础，排名自然靠前',
-        description: '每种语言独立SEO优化，多语言SEO叠加效果，让您的网站在Google各国搜索结果中排名更高，自然流量翻倍。',
-        icon: 'tabler:seo',
+        title: 'Google SEO 基因植入',
+        description: '从代码结构到URL规范，从TDK设置到内链布局，每一个细节都严格遵循Google SEO白皮书，让网站天生具备高排名潜力。',
+        icon: 'tabler:search',
       },
       {
-        title: '符合Google制造业最佳实践',
-        description: '严格遵循Google对制造型企业官网的标准，页面结构、内容布局、产品展示都经过优化，更容易被收录和推荐。',
-        icon: 'tabler:checklist',
+        title: 'B2B 转化逻辑设计',
+        description: '我们深知B2B采购决策链条。通过信任背书、实力展示、询盘引导等心理学设计，让访客转化为实实在在的询盘。',
+        icon: 'tabler:user-plus',
       },
       {
-        title: '工业美学设计，符合全球审美',
-        description: '参考德国、日本制造业巨头官网设计，简洁专业、突出产品，符合B2B客户审美习惯，提升品牌信任度。',
+        title: '工业级审美标准',
+        description: '拒绝花哨和廉价感。我们参考德系、日系制造业官网风格，打造严谨、专业、高端的品牌形象，赢得大客户信赖。',
         icon: 'tabler:palette',
       },
       {
-        title: '顶级技术架构，全球极速访问',
-        description: 'Astro框架+全球CDN加速，无论客户在哪个国家，打开速度都在2秒内，HTTPS安全加密，保护企业和客户信息。',
+        title: '全球 CDN 极速分发',
+        description: '天下武功，唯快不破。部署全球200+节点CDN，无论客户在纽约、伦敦还是迪拜，打开您的网站都像访问本地文件一样快。',
         icon: 'tabler:rocket',
       },
       {
-        title: '移动端完美适配，随时随地展示',
-        description: '手机、平板、电脑自适应，客户用任何设备访问都完美展示，不错失任何一个商机。',
-        icon: 'tabler:device-mobile',
+        title: '全终端自适应响应',
+        description: '在这个移动办公时代，您的官网在手机、平板、甚至展会大屏上都能完美展示，随时随地捕捉商机。',
+        icon: 'tabler:devices',
       },
     ]}
   />
 
   <!-- Features2 核心功能详解 ************** -->
   <Features2
-    title="功能全面，真正为制造企业量身定制"
-    subtitle="不是简单的模板套用，而是深度理解制造业需求"
-    tagline="核心功能"
+    title="专为制造企业定制的<br/><span class='text-blue-600'>获客工具箱</span>"
+    subtitle="不仅仅是页面展示，更是一套完整的营销闭环系统"
+    tagline="Core Features"
     columns={2}
     items={[
       {
-        title: '企业实力展示',
-        description: '公司介绍、生产车间、荣誉资质、合作客户，全方位展现企业实力，建立客户信任。',
-        icon: 'tabler:building-factory',
+        title: '🏭 沉浸式云工厂',
+        description: '通过VR全景或高清图集，将您的生产线、实验室、样品间搬到线上。让客户隔着屏幕也能感受到您的制造实力。',
+        icon: 'tabler:building-factory-2',
       },
       {
-        title: '产品展示系统',
-        description: '多级分类、高清大图、参数表格、视频演示，让客户全方位了解产品细节，增强购买信心。',
-        icon: 'flat-color-icons:gallery',
+        title: '📦 智能产品目录',
+        description: '支持多级分类、参数筛选、PDF手册下载。像亚马逊一样专业的展示体验，方便采购商快速找到所需产品。',
+        icon: 'tabler:layout-grid',
       },
       {
-        title: '新闻动态模块',
-        description: '展会信息、行业动态、公司新闻，保持网站活跃度，提升SEO排名，增强客户信任。',
+        title: '📰 内容营销中心',
+        description: '集成Blog和News模块。定期发布行业干货、案例分析，不仅体现专业度，更是源源不断获取SEO长尾流量的利器。',
         icon: 'tabler:news',
       },
       {
-        title: '智能询盘表单',
-        description: '多语言表单，自动邮件提醒，询盘信息分类管理，不错过任何一个潜在客户。',
-        icon: 'tabler:mail',
+        title: '💌 智能询盘管家',
+        description: '表单防垃圾过滤、自动邮件回复、CRM系统对接。不错过任何一个真实商机，同时屏蔽无效骚扰。',
+        icon: 'tabler:mail-forward',
       },
       {
-        title: 'TikTok 接入企业官网落地页，打造永久线上展会，实现多平台同步引流获客',
-        description: 'TikTok粉丝1000+即可挂载独立站，实现24小时线上展会，多平台同步引流获客，让您的产品全天候展示给全球客户。',
-        icon: 'tabler:globe',
+        title: '🔗 TikTok 流量着陆页',
+        description: '无缝对接TikTok企业号。短视频引流 -> 官网沉淀 -> 询盘转化，打造"公域+私域"的流量闭环。',
+        icon: 'tabler:brand-tiktok',
+      },
+      {
+        title: '📊 数据分析看板',
+        description: '集成Google Analytics 4。谁访问了网站？来自哪个国家？看了哪些产品？数据一目了然，决策有据可依。',
+        icon: 'tabler:chart-dots',
       },
     ]}
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-blue-50/50 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
 
   <!-- Steps 服务流程 ****************** -->
   <Steps
-    title="30天上线流程"
-    subtitle="专业团队全程服务，省心省力"
+    title="30天交付承诺"
+    subtitle="我们将复杂的建站工程，拆解为标准化的SOP流程。<br/>您只需配合提供素材，剩下的交给我们。"
     items={[
       {
-        title: '第1-3天：需求沟通',
-        description: '深度了解您的产品、目标市场、竞争对手，制定专属建站方案和内容规划。',
-        icon: 'tabler:message-circle',
+        title: 'Kick-off: 深度调研与策划 <span class="text-sm font-normal text-slate-500 ml-2">Day 1-3</span>',
+        description: '我们不急着动手，先动脑。深度调研您的产品特性、目标市场竞对分析，输出专属的《建站策划方案》和《内容架构图》。',
+        icon: 'tabler:bulb',
       },
       {
-        title: '第4-7天：素材及设计确认',
-        description: '根据您的行业特点和品牌调性，设计官网首页和内页效果图，修改至您满意为止。',
+        title: 'Design: 视觉设计与确认 <span class="text-sm font-normal text-slate-500 ml-2">Day 4-10</span>',
+        description: '资深UI设计师操刀，结合行业调性与品牌VI，输出首页及内页的高保真设计稿。我们承诺：修改到您满意为止。',
         icon: 'tabler:palette',
       },
       {
-        title: '第8-20天：开发建设',
-        description: '前端开发、多语言翻译、SEO优化同步进行，保证质量和进度。',
+        title: 'Dev: 全栈开发与SEO部署 <span class="text-sm font-normal text-slate-500 ml-2">Day 11-20</span>',
+        description: '前端代码构建、CMS后台搭建、多语言系统配置。同时，SEO团队同步介入，进行TDK设置、Sitemap生成等SEO基础部署。',
         icon: 'tabler:code',
       },
       {
-        title: '第21-25天：内容填充',
-        description: '协助您整理产品信息、公司介绍、新闻资讯等内容，专业翻译成多国语言。',
-        icon: 'tabler:file-text',
+        title: 'Content: 内容填充与翻译 <span class="text-sm font-normal text-slate-500 ml-2">Day 21-25</span>',
+        description: '专业的母语翻译团队进场，将您的产品资料翻译成多国语言，并录入系统。让您的网站内容既准确又地道。',
+        icon: 'tabler:language-katakana',
       },
       {
-        title: '第26-28天：测试优化',
-        description: '全面测试各语言版本、各种设备兼容性、询盘表单、加载速度等，确保完美上线。',
-        icon: 'tabler:checkbox',
+        title: 'Test: 全面测试与优化 <span class="text-sm font-normal text-slate-500 ml-2">Day 26-28</span>',
+        description: '像质检员一样严苛。涵盖：浏览器兼容性测试、移动端适配测试、询盘表单功能测试、页面加载速度测试等。',
+        icon: 'tabler:test-pipe',
       },
       {
-        title: '第29-30天：正式上线',
-        description: '绑定域名、提交搜索引擎、设置分析工具，培训您使用后台管理系统。',
+        title: 'Launch: 正式上线与交付培训 <span class="text-sm font-normal text-slate-500 ml-2">Day 29-30</span>',
+        description: '域名解析、提交Google收录、配置GA数据分析。最后，我们会为您团队进行后台操作培训，移交所有账号权限。',
         icon: 'tabler:rocket',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: '30天上线流程',
+      src: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: '标准化建站流程',
     }}
   />
 
   <!-- Testimonials 客户案例 ******************* -->
   <Testimonials
     id="cases"
-    title="真实客户案例"
-    subtitle="他们通过官网，成功开拓了全球市场"
-    tagline="成功案例"
+    title="他们已经先行一步"
+    subtitle="200+ 中国制造企业的共同选择"
+    tagline="Success Stories"
     testimonials={[
       {
-        testimonial: '上线3个月，每周都能收到5-8个询盘，其中60%来自德国和美国。现在不用到处找客户了，客户主动找我们，而且都是精准需求。',
+        testimonial: '以前我们只做代工，利润很薄。有了品牌官网后，美国客户直接搜到了我们，第一次就下了个试单。现在我们已经成了他们的核心供应商，利润率翻了一倍！',
         name: '张总',
-        job: '东莞某精密模具企业',
+        job: '精密模具制造商 · 东莞',
         image: {
-          alt: '客户案例1',
+          src: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iaWNvbiBpY29uLXRhYmxlciBpY29uLXRhYmxlci11c2VyIj48cGF0aCBzdHJva2U9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjQiIC8+PHBhdGggZD0iTTYgMjF2LTJhNCA0IDAgMCAxIDQtNGg0YTQgNCAwIDAgMSA0IDJ2MiIgLz48L3N2Zz4=',
+          alt: '张总头像',
         },
       },
       {
-        testimonial: '参加德国展会时，把官网印在名片上，客户当场就打开看，觉得我们很专业。展会后跟进的客户转化率比以前高了3倍，投资回报率太高了！',
-        name: '李总',
-        job: '深圳某机械设备企业',
+        testimonial: '这个多语言功能太实用了！之前有俄罗斯客户发邮件来，我们还得找翻译。现在直接把俄语版网站发过去，客户非常惊喜，说我们太专业了。',
+        name: 'Lisa Wang',
+        job: 'LED照明出口商 · 深圳',
         image: {
-          alt: '客户案例2',
+          src: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iaWNvbiBpY29uLXRhYmxlciBpY29uLXRhYmxlci11c2VyIj48cGF0aCBzdHJva2U9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjQiIC8+PHBhdGggZD0iTTYgMjF2LTJhNCA0IDAgMCAxIDQtNGg0YTQgNCAwIDAgMSA0IDJ2MiIgLz48L3N2Zz4=',
+          alt: 'Lisa头像',
         },
       },
       {
-        testimonial: '原来在阿里巴巴上竞争太激烈，客户总是压价。现在有了自己的官网，客户觉得我们是品牌供应商，价格接受度高多了，利润率提升了40%。',
-        name: '王总',
-        job: '宁波某五金工具企业',
+        testimonial: '建站只用了不到一个月，效率很高。最让我意外的是SEO效果，上线才两个月，现在搜我们核心产品的关键词，Google首页就能看到我们。',
+        name: '周经理',
+        job: '包装机械厂 · 苏州',
         image: {
-          alt: '客户案例3',
+          src: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iaWNvbiBpY29uLXRhYmxlciBpY29uLXRhYmxlci11c2VyIj48cGF0aCBzdHJva2U9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjQiIC8+PHBhdGggZD0iTTYgMjF2LTJhNCA0IDAgMCAxIDQtNGg0YTQgNCAwIDAgMSA0IDJ2MiIgLz48L3N2Zz4=',
+          alt: '周经理头像',
         },
       },
       {
-        testimonial: '最惊喜的是日本客户，他们看到日语版官网后，觉得我们很重视日本市场，主动下了大单。多语言真的很有用，让客户感受到被尊重。',
+        testimonial: '我对比了好几家建站公司，巨星出海是最懂外贸的。他们设计的网站逻辑完全是按照欧美客户的思维来的，不仅仅是好看，更是好用。',
         name: '陈总',
-        job: '广州某电子元件企业',
+        job: '新能源配件厂 · 常州',
         image: {
-          alt: '客户案例4',
+          src: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iaWNvbiBpY29uLXRhYmxlciBpY29uLXRhYmxlci11c2VyIj48cGF0aCBzdHJva2U9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjQiIC8+PHBhdGggZD0iTTYgMjF2LTJhNCA0IDAgMCAxIDQtNGg0YTQgNCAwIDAgMSA0IDJ2MiIgLz48L3N2Zz4=',
+          alt: '陈总头像',
         },
       },
       {
-        testimonial: 'Google搜索我们产品的关键词，前三页都能看到我们的网站，多语言SEO效果太好了。现在每天都有自然流量，不用花钱打广告。',
-        name: '周总',
-        job: '上海某汽配企业',
+        testimonial: '以前参加展会，名片上印个阿里巴巴店铺地址，感觉很low。现在有了独立站，名片一发，客户看我们的眼神都不一样了，谈价格也更有底气。',
+        name: '赵总',
+        job: '五金工具制造商 · 永康',
         image: {
-          alt: '客户案例5',
+          src: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iaWNvbiBpY29uLXRhYmxlciBpY29uLXRhYmxlci11c2VyIj48cGF0aCBzdHJva2U9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjQiIC8+PHBhdGggZD0iTTYgMjF2LTJhNCA0IDAgMCAxIDQtNGg0YTQgNCAwIDAgMSA0IDJ2MiIgLz48L3N2Zz4=',
+          alt: '赵总头像',
         },
       },
       {
-        testimonial: '之前觉得建官网很复杂，没想到30天就上线了，而且后台操作很简单，我们自己就能更新产品和新闻。服务团队很专业，响应很快。',
-        name: '刘总',
-        job: '苏州某包装机械企业',
+        testimonial: '后台操作真的很简单，我们文员小妹培训了一次就会了。发布新产品、更新新闻都很方便，再也不用像以前那样改个字都要找建站公司收钱。',
+        name: '刘厂长',
+        job: '注塑机生产商 · 宁波',
         image: {
-          alt: '客户案例6',
+          src: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iaWNvbiBpY29uLXRhYmxlciBpY29uLXRhYmxlci11c2VyIj48cGF0aCBzdHJva2U9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjQiIC8+PHBhdGggZD0iTTYgMjF2LTJhNCA0IDAgMCAxIDQtNGg0YTQgNCAwIDAgMSA0IDJ2MiIgLz48L3N2Zz4=',
+          alt: '刘厂长头像',
         },
       },
     ]}
@@ -368,90 +479,120 @@ const metadata = {
   <Content
     isReversed
     isAfterContent
-    tagline="对比优势"
-    title="为什么不选择B2B平台？"
     items={[
       {
-        title: 'B2B平台：同行扎堆，价格战激烈',
-        description: '阿里巴巴、环球资源上同类产品几百上千家，客户货比三家，只能拼价格，利润越来越薄。',
+        title: 'B2B平台：红海内卷',
+        description: '数千家同行同台竞技，客户货比三家，只能拼价格。一旦停止续费，所有流量和积累瞬间归零。',
+        icon: 'tabler:users-group',
       },
       {
-        title: '企业官网：独立展示，没有竞争',
-        description: '您的官网只展示自己的产品，客户进来后不会看到同行，专注了解您的优势，转化率自然更高。',
+        title: '独立站：品牌私域',
+        description: '您的专属秀场，客户沉浸式浏览，没有同行干扰。官网是企业的永久数字资产，流量越积越多，品牌越老越值钱。',
+        icon: 'tabler:crown',
       },
       {
-        title: 'B2B平台：年年续费，成本高昂',
-        description: '平台会员费每年几万元，还要购买推广位，长期投入大，一旦停止续费，积累的流量全部归零。',
+        title: 'B2B平台：规则受限',
+        description: '受制于平台规则，无法自由获取客户数据，无法做精细化运营，甚至随时面临封号风险。',
+        icon: 'tabler:gavel',
       },
       {
-        title: '企业官网：一次投资，长期受益',
-        description: '官网是您的永久资产，一次投入后每年只需几千元维护费，SEO流量持续增长，越用越划算。',
+        title: '独立站：数据自主',
+        description: '掌握所有用户数据，自由安装分析工具，精准追踪用户行为，实现精细化营销和再营销。',
+        icon: 'tabler:database',
       },
     ]}
   >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        B2B平台 + 企业官网 = 双管齐下效果最佳
+     <Fragment slot="content">
+       <div class="mb-4">
+        <span class="text-xs font-bold tracking-widest text-purple-600 uppercase bg-purple-100 dark:bg-purple-900/30 px-2 py-1 rounded">Strategic Choice</span>
+      </div>
+      <h3 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4">
+        是做平台的租客<br/>还是做<span class="text-purple-600">官网的主人</span>？
       </h3>
-      <p class="text-lg">
-        我们建议：<span class="font-bold text-blue-600">保留B2B平台作为辅助渠道，重点建设企业官网</span>。
-        B2B平台负责快速曝光，企业官网负责品牌建设和深度转化，两者结合才是最佳策略。
+      <p class="text-lg text-slate-600 dark:text-slate-400 mb-6">
+        我们不建议您完全放弃B2B平台，但如果您想建立长久的品牌护城河，拥有一个**属于自己的独立官网**是必然选择。
       </p>
-    </Fragment>
-
-    <Fragment slot="image">
-      <div class="relative w-full h-[400px] bg-gradient-to-br from-purple-500 to-indigo-600 rounded-lg shadow-xl flex items-center justify-center">
-        <div class="text-white text-center p-8">
-          <div class="text-5xl mb-4">💎</div>
-          <div class="text-3xl font-bold mb-3">企业官网</div>
-          <div class="text-xl">您的品牌资产，永久增值</div>
-        </div>
+      
+      <div class="flex items-center gap-4 text-sm font-medium text-slate-500">
+         <div class="flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-purple-500"></span> 品牌主权
+         </div>
+         <div class="flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-purple-500"></span> 数据私有
+         </div>
+         <div class="flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-purple-500"></span> 永久资产
+         </div>
       </div>
     </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    <Fragment slot="image">
+      <div class="relative group mx-auto max-w-sm md:max-w-none">
+         <div class="absolute -inset-2 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-500"></div>
+         <div class="relative bg-white dark:bg-slate-800 rounded-xl shadow-2xl overflow-hidden border border-slate-100 dark:border-slate-700">
+            <div class="grid grid-cols-2 divide-x divide-slate-100 dark:divide-slate-700 h-64">
+               <!-- Left: Platform -->
+               <div class="p-6 flex flex-col items-center justify-center text-center bg-slate-50 dark:bg-slate-900/50">
+                  <div class="w-16 h-16 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center mb-4 grayscale opacity-50">
+                     <span class="text-2xl">🏬</span>
+                  </div>
+                  <h4 class="font-bold text-slate-500 mb-2">B2B 平台</h4>
+                  <div class="text-xs text-slate-400 space-y-1">
+                     <p>❌ 每年续费 3W+</p>
+                     <p>❌ 同行比价严重</p>
+                     <p>❌ 流量属于平台</p>
+                  </div>
+               </div>
+               
+               <!-- Right: Website -->
+               <div class="p-6 flex flex-col items-center justify-center text-center bg-purple-50 dark:bg-purple-900/10 relative overflow-hidden">
+                  <div class="absolute top-2 right-2 text-[10px] font-bold bg-purple-600 text-white px-2 py-0.5 rounded-full">Winner</div>
+                  <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-4 text-purple-600">
+                     <span class="text-3xl">🏰</span>
+                  </div>
+                  <h4 class="font-bold text-purple-700 dark:text-purple-300 mb-2">品牌官网</h4>
+                  <div class="text-xs text-slate-500 dark:text-slate-400 space-y-1">
+                     <p>✅ 一次投入 长期受益</p>
+                     <p>✅ 独享客户流量</p>
+                     <p>✅ 品牌资产增值</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
     </Fragment>
   </Content>
 
   <!-- FAQs 常见问题 ******************* -->
   <FAQs
-    title="常见问题解答"
-    subtitle="解答您的疑虑，帮您做出正确决策"
+    title="我们懂您的顾虑"
+    subtitle="用真诚回答每一个疑问，因为我们也是从制造业走出来的"
     tagline="FAQ"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: '我们是小工厂，有必要建官网吗？',
-        description: '非常有必要！海外客户不会因为您是小工厂就不找您，反而会因为没有官网觉得您不专业而放弃合作。很多小工厂通过官网获得了大客户，因为官网让您看起来更专业、更值得信赖。',
+        title: 'Q: 我们是小工厂，建官网会不会显得"大而不当"？',
+        description: 'A: 完全不会。恰恰相反，官网是小工厂实现"弯道超车"的最佳途径。在互联网上，没人知道您的厂房面积。通过专业的视觉包装和内容呈现，小工厂完全可以展示出不输大企业的专业形象和信赖感。',
       },
       {
-        title: '建站需要多少钱？性价比高吗？',
-        description: '我们的多国语言官网建站费用在2-5万元（根据语言数量和功能需求），相比B2B平台每年几万元的会员费，官网一次投入，长期使用。平均3-6个月回本，之后都是纯利润增长，性价比非常高。',
+        title: 'Q: 建站费用是一次性的吗？后续有什么隐形消费？',
+        description: 'A: 建站费用是一次性结清的。上线后的次年起，您仅需支付极低的域名和服务器成本（约¥2000-5000/年，视配置而定）。除此之外，没有会员费、没有抽成，网站的所有权和数据完全属于您。',
       },
       {
-        title: '我不懂技术，能自己管理网站吗？',
-        description: '完全可以！我们提供简单易用的后台管理系统，就像使用Word一样简单。我们会提供详细的培训和使用手册，并提供长期技术支持，随时解答您的问题。',
+        title: 'Q: 我不懂英语，也不懂技术，怎么管理网站？',
+        description: 'A: 放心交给我们。技术上，我们提供"傻瓜式"的后台管理，会打字就会发产品。语言上，系统内置了AI翻译辅助，且初期内容我们会帮您配置好。您只需要专注于回复询盘邮件即可。',
       },
       {
-        title: '多语言翻译准确吗？会不会出错？',
-        description: '我们采用人工翻译+AI辅助的方式，由专业译员翻译，特别是行业专业术语，确保准确无误。所有翻译内容都会经过您的确认才上线，不用担心翻译质量。',
+        title: 'Q: 做了官网就一定有询盘吗？',
+        description: 'A: 官网是"容器"，流量是"水"。我们负责把容器造得精美、利于SEO（易于被Google收录）。虽然SEO需要时间积累（通常3-6个月），但如果您结合我们的TikTok引流方案或适当投放Google Ads，上线第一周就能收到询盘。',
       },
       {
-        title: 'SEO优化多久能看到效果？',
-        description: 'Google收录一般需要1-3个月，开始获得自然流量需要3-6个月。但我们的多语言SEO优化，每种语言都会带来流量，叠加效果明显。配合Google Ads等付费推广，可以立即获得流量和询盘。',
+        title: 'Q: 你们的建站和外面几千块的模板站有什么区别？',
+        description: 'A: 区别在于"获客逻辑"。模板站只是把内容填进去，往往代码冗余、加载慢、不利于SEO。我们的定制站是基于Google排名规则开发的，从底层代码到内容布局，都是为了让Google更喜欢，让客户更愿意留资。',
       },
       {
-        title: '后期维护费用是多少？',
-        description: '后期维护费用很低，每年只需2000-5000元，包括域名续费、服务器费用、技术支持、安全更新等。您也可以选择自己维护，我们提供完整的技术文档。',
-      },
-      {
-        title: '我们已经有中文官网了，能直接翻译吗？',
-        description: '可以参考您的中文官网，但不能简单翻译。海外客户的浏览习惯、审美偏好、关注重点都和国内不同。我们会根据目标市场特点，重新设计布局和内容，确保符合海外客户需求。',
-      },
-      {
-        title: '如果效果不好怎么办？',
-        description: '我们有200+成功案例，对效果非常有信心。我们会在项目开始前，充分分析您的产品和市场，制定合理的预期。同时，我们提供长期的优化服务，持续提升网站效果。',
+        title: 'Q: 已经有中文官网了，直接翻译行不行？',
+        description: 'A: 千万不要。国内和国外的审美、阅读习惯完全不同。中文站喜欢大红大紫、信息堆砌；而欧美客户喜欢简洁、直接、数据化。直接翻译的中文站往往会让老外"水土不服"，跳出率极高。',
       },
     ]}
   />
@@ -461,28 +602,30 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: '立即咨询建站方案',
+        text: '免费获取行业建站方案',
         href: '/contact',
-        icon: 'tabler:message-circle',
+        icon: 'tabler:download',
       },
       {
         variant: 'secondary',
-        text: '查看更多成功案例',
-        href: '#cases',
+        text: '预约1对1顾问咨询',
+        href: '/contact',
       },
     ]}
   >
     <Fragment slot="title">
-      不要再让订单流向竞争对手<br class="block sm:hidden" />
-      <span class="sm:whitespace-nowrap text-blue-600">现在就开始建设您的全球门户</span>
+      <span class="text-3xl md:text-4xl font-bold">最好的种树时间是十年前<br/>其次是<span class="text-blue-600">现在</span></span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="font-bold text-xl">前30名咨询客户，享受限时优惠：</span><br />
-      <span class="text-lg">· 赠送价值5000元的Google Ads推广费</span><br />
-      <span class="text-lg">· 赠送首年域名和服务器费用</span><br />
-      <br class="hidden md:inline" />
-      <span class="text-base text-gray-600 dark:text-gray-400 mt-4 block">立即联系我们，获取免费建站方案和行业案例</span>
+      <div class="mt-4 text-lg text-slate-600 dark:text-slate-400">
+        全球每天有数以亿计的 B2B 采购搜索发生。<br/>
+        与其在观望中流失商机，不如现在就开始行动，建立您的全球数字资产。
+      </div>
+      <div class="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800 max-w-2xl mx-auto">
+         <p class="text-sm font-bold text-blue-800 dark:text-blue-300">🎉 限时福利</p>
+         <p class="text-sm text-blue-700 dark:text-blue-400 mt-1">本月前10名签约客户，额外赠送价值 <span class="font-bold">¥5000</span> 的《TikTok企业号冷启动运营包》及首年服务器费用。</p>
+      </div>
     </Fragment>
   </CallToAction>
 </Layout>
